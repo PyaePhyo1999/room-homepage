@@ -1,0 +1,471 @@
+@use "variables";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: variables.$family;
+}
+
+.slider__container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+/* Navigation */
+.nav{
+    padding: 40px 60px;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 1vh; /* bottom of your slide area */
+    width: 100%;
+    justify-content: flex-start;
+    z-index: 1;
+}
+
+.close{
+    display: none;
+}
+
+#menu{
+    display: none;
+}
+.nav img{
+    width: 80px;
+}
+.nav__bar ul{
+    margin-left: 20px;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+.nav__bar ul li{
+    list-style: none;
+}
+.nav__bar ul li a{
+    text-decoration: none;
+    color: variables.$White;
+    font-weight: 500;
+}
+
+/* Slides */
+.slide__wrapper{
+    flex-basis: 60%;
+}
+
+.slides{
+    display: flex;
+    width: 300%; /* 3 slides */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide{
+    width: 100vw;
+    display: flex;
+}
+
+/* Slide 1 */
+.slide1__left{
+    flex-basis: 60%;
+    background-image: url('/images/desktop-image-hero-1.jpg');
+    background-position:60% center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+
+.slide1__right{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slide1__right__brief
+{
+    flex-basis: 90%;
+    padding: 0 80px;
+    margin-top: 60px;
+}
+
+.slide1__right__brief h1{
+   padding: 20px 0;
+   font-size: 36px;
+   font-weight: 600;
+   letter-spacing: -1px;
+}
+
+.slide1__right__brief p{
+    font-size: 14px;
+    line-height: 1.3;
+    color: variables.$Grey_500;
+}
+
+.shop__now{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.slide1__right__brief .shop__now p,
+.slide2__right__brief .shop__now p,
+.slide3__right__brief 
+.shop__now p{
+    font-size: variables.$font_size;
+    color: variables.$Grey_800;
+    font-weight: 600;
+    letter-spacing: 8px;
+}
+
+/* Slide 2 */
+.slide2__left{
+    flex-basis: 60%;
+    background-image: url('/images/desktop-image-hero-2.jpg');
+    background-position:60% center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+
+.slide2__right{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slide2__right__brief
+{
+    flex-basis: 90%;
+    padding: 0 80px;
+    margin-top: 60px;
+}
+
+.slide2__right__brief h1{
+   padding: 20px 0;
+   font-size: 36px;
+   font-weight: 600;
+   letter-spacing: -1px;
+}
+
+.slide2__right__brief p{
+    font-size: 14px;
+    line-height: 1.3;
+    color: variables.$Grey_500;
+}
+
+/* Slide 3 */
+.slide3__left{
+    flex-basis: 60%;
+    background-image: url('/images/desktop-image-hero-3.jpg');
+    background-position:60% center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+
+.slide3__right{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slide3__right__brief
+{
+    flex-basis: 90%;
+    padding: 0 80px;
+    margin-top: 60px;
+}
+
+.slide3__right__brief h1{
+   padding: 20px 0;
+   font-size: 36px;
+   font-weight: 600;
+   letter-spacing: -1px;
+}
+
+.slide3__right__brief p{
+    font-size: 14px;
+    line-height: 1.3;
+    color: variables.$Grey_500;
+}
+
+
+/* Change Slide */
+.slide__change{
+  position: absolute;
+  bottom: 40vh; /* bottom of your slide area */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+}
+.slide__change__brief{   
+    flex-basis: 40%;
+    display: flex;
+}
+
+.arrow{
+  width: 12.5%;  
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: variables.$Black;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.arrow:disabled {
+  cursor: not-allowed;
+}
+
+/* Fixed Content */
+.fixed__content{
+    flex-basis: 40%;
+    display: flex;
+}
+
+.fixed__content__left{
+   flex-basis: 30%;
+   background-image: url('/images/image-about-dark.jpg');
+   background-position:60% center;
+   background-size: cover;
+   background-repeat: repeat;
+   min-height: 200px;
+}
+.fixed__content__middle{
+    flex-basis: 40%;
+}
+.fixed__content__middle__brief{
+    padding: 60px 60px;
+}
+.fixed__content__middle__brief h3{
+    font-size: variables.$font_size;
+    color: variables.$Black;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+
+.fixed__content__middle__brief p{
+    margin-top: 20px;
+     font-size: 14px;
+    line-height: 1.3;
+    color: variables.$Grey_500;
+}
+
+.fixed__content__right{
+    flex-basis: 30%;
+    background-image: url('/images/image-about-light.jpg');
+    background-position:60% center;
+    background-size: cover;
+    background-repeat: repeat;
+    min-height: 200px;
+}
+
+@media(max-width:768px){
+    
+    body, html {
+        overflow:auto;
+    }
+    .slider__container{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 220vh;
+    }
+    .nav{
+        padding: 20px 30px;
+        z-index: 2;
+    }
+    .open__menu{
+         align-items: center;
+         display: flex;
+         position: absolute;
+         width: 100%;
+         justify-content: flex-start;
+    }
+
+    .open__menu #menu{
+        cursor: pointer;
+        display: block;
+        width: 24px;
+        height: 16px;
+    }
+   
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img{
+        width: 60px;        
+    }
+
+     .nav__bar{
+        display: flex;
+        background: rgba(0,0,0,0.3);
+        height: 100%;
+        right: -100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: 1s;
+
+    }
+
+    .close__menu{
+        padding: 20px 30px;
+        background: variables.$White;
+        width: 100%;
+        height: 14vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close {
+        display: flex;
+    }
+
+    #close{
+        cursor: pointer;
+        width: 16px;
+
+    }
+
+    .nav__bar ul{
+        align-items: baseline;
+        display: flex;
+        gap: 20px;
+    }
+    .nav__bar ul li{
+        list-style: none;
+    }
+    .nav__bar ul li a{
+        text-decoration: none;
+        color: variables.$Black;
+        font-weight: 700;
+    }
+
+/* Slides */
+    .slide__wrapper{
+        flex-basis: 50%;
+    }
+
+    .slide{
+        flex-direction: column;
+    }
+
+/* Slide 1 */
+    .slide1__left{
+        background-image: url('/images/mobile-image-hero-1.jpg');
+    }
+
+    .slide1__right{
+        flex-basis: 60%;
+    }
+
+    .slide1__right__brief
+    {
+        flex-basis: 100%;
+        padding: 30px 30px;
+        margin-top: 0;
+    }
+
+    .slide1__right__brief p{
+        padding: 4px 0;
+    }
+
+    /* Slide 2 */
+    .slide2__left{
+        background-image: url('/images/mobile-image-hero-2.jpg');
+    }
+
+    .slide2__right{
+        flex-basis: 60%;
+    }
+
+
+    .slide2__right__brief
+    {
+        flex-basis: 100%;
+        padding: 30px 30px;
+        margin-top: 0;
+    }
+
+    .slide2__right__brief p{
+        padding: 4px 0;
+    }
+
+/* Slide 3 */
+    .slide3__left{   
+        background-image: url('/images/mobile-image-hero-3.jpg');
+    }
+    .slide3__right{
+        flex-basis: 60%;
+    }
+
+
+    .slide3__right__brief
+    {
+        flex-basis: 100%;
+        padding: 30px 30px;
+        margin-top: 0;
+    }
+    .slide3__right__brief p{
+        font-size: 14px;
+        line-height: 1.3;
+        color: variables.$Grey_500;
+    }
+
+
+    /* Change Slide */
+    .slide__change{
+        position: absolute;
+        bottom: 45vh; /* bottom of your slide area */
+        width: 100%;
+        justify-content: flex-end;
+        display: flex;
+    }
+    .slide__change__brief{   
+        flex-basis: 20%;
+    }
+    
+    .arrow{
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* Fixed Content */
+    .fixed__content{
+        flex-basis: 50%;
+        flex-direction: column;
+    }
+
+
+    .fixed__content__middle__brief{
+        padding: 60px 30px;
+    }
+
+
+    .fixed__content__middle__brief p{ 
+        margin: 36px 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+

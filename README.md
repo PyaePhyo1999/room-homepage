@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [](https://github.com/PyaePhyo1999/room-homepage)
 
 ## My process
 I try to used preprocessing css like scss from what I've learned from the -mentor. 
